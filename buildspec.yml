@@ -6,6 +6,8 @@ env:
      IMAGE_REPO_NAME: "joseph-repo"
      IMAGE_TAG: "latest"
      AWS_ACCOUNT_ID: "975050105170"
+     DOCKER_PASSWORD: Shijin@nj20
+     DOCKER_USERNAME: shijin1298
 
 phases:
   #install:
@@ -16,6 +18,7 @@ phases:
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
       - echo Logging in to Amazon ECR...
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
   build:
     commands:

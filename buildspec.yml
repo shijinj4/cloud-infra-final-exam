@@ -2,9 +2,9 @@ version: 0.2
 
 env:
   variables:
-     AWS_DEFAULT_REGION: "ca-central-1"
-     IMAGE_REPO_NAME: "stephen-final-test"
-     AWS_ACCOUNT_ID: "846116578401"
+     AWS_DEFAULT_REGION: "us-east-1"
+     IMAGE_REPO_NAME: "	joseph-repo"
+     AWS_ACCOUNT_ID: "975050105170"
 
 phases:
   #install:

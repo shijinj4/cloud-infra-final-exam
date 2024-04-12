@@ -6,8 +6,8 @@ env:
      IMAGE_REPO_NAME: "joseph-repo"
      IMAGE_TAG: "latest"
      AWS_ACCOUNT_ID: "975050105170"
-     DOCKER_PASSWORD: Shijin@nj20
-     DOCKER_USERNAME: shijin1298
+     DOCKER_PASSWORD: "Shijin@nj20"
+     DOCKER_USERNAME: "shijin1298"
 
 phases:
   #install:
